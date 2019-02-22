@@ -10,9 +10,9 @@ export class TemplateComponent implements OnInit {
 
   constructor() { }
   usuario:Object={
-    nombre:'Miguel',
-    apellido:'Herrera',
-    correo:""
+    nombre:null,
+    apellido:null,
+    correo:null
   }
   guardar(forma:NgForm){
     console.log(forma)
