@@ -12,8 +12,28 @@ export class TemplateComponent implements OnInit {
   usuario:Object={
     nombre:null,
     apellido:null,
-    correo:null
+    correo:null,
+    pais:'CRI',
+    sexo:null
   }
+  paises = [{
+    codigo:"CRI",
+    pais:"costa rica"
+  },
+  {
+    codigo:"ESP",
+    pais:"España"
+  },
+  {
+    codigo:"MEX",
+    pais:"México"
+  },
+  {
+    codigo:"BRS",
+    pais:"Brasil"
+  },
+
+]
   guardar(forma:NgForm){
     console.log(forma)
     console.log('ngForm',forma)

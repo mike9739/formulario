@@ -40,12 +40,36 @@
         </div>
     </div>
 
+    <div class="form-group row">
+        <label class="col-2 col-form-label">Correo</label>
+        <div class="col-md-8">
+            <select [(ngModel)]="usuario.pais" class="form-control" name="pais">Pais
+            <option value="">Seleccione un pais</option>
+            <option *ngFor="let pais of paises" [value]="pais.codigo">{{pais.pais}}</option>
+        </select>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-2 col-form-label">sexo</label>
+        <div class="col-md-8">
+            <div class="custom-control custom-radio">
+                <input [(ngModel)]="usuario.sexo" value="hombre" type="radio" id="customRadio1" name="sexo" class="custom-control-input">
+                <label class="custom-control-label" for="customRadio1">Hombre</label>
+            </div>
+            <div class="custom-control custom-radio">
+                <input [(ngModel)]="usuario.sexo" value="mujer" type="radio" id="customRadio2" name="sexo" class="custom-control-input">
+                <label class="custom-control-label" for="customRadio2">Mujer</label>
+            </div>
+        </div>
+    </div>
+
 
 
     <div class="form-group row">
         <label class="col-2 col-form-label">&nbsp;</label>
         <div class="input-group col-md-8">
-            <button type="submit" class="btn btn-outline-primary">
+            <button [disabled]="!forma.valid" type="submit" class="btn btn-outline-primary">
         Guardar
       </button>
         </div>
